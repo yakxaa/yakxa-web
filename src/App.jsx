@@ -1,15 +1,17 @@
 import { useState } from "react";
 import reactLogo from "./assets/react.svg";
 import "./App.css";
-import AboutHeading from "./components/about_heading";
+import AboutSection from "./components/about_section.jsx";
+import About from "./layouts/about";
 
 function App() {
   // const [count, setCount] = useState(0)
 
   return (
-    <div className='App'>
+    <div>
       {/* <h1 className='text-3xl font-bold'>Hello world!</h1> */}
-      <AboutHeading top="our" bottom="Mission"></AboutHeading>
+      <About />
+      
     </div>
   );
 }
