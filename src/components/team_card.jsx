@@ -10,7 +10,7 @@ function TeamImage(props){
 
 function TeamCard(props){
 	return (
-		<div className="flex flex-col items-start w-52 mx-12">
+		<div className="flex flex-col items-start w-52">
 			<TeamImage />
 		
 			<p className="text-left font-semibold text-2xl">Deep G.</p>
