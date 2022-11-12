@@ -5,6 +5,7 @@ import AboutSection from "./components/about_section.jsx";
 import About from "./layouts/about";
 import Team from "./layouts/team";
 import Contact from "./layouts/contact";
+import Newsletter from "./layouts/news";
 
 function App() {
   // const [count, setCount] = useState(0)
@@ -15,6 +16,7 @@ function App() {
       <About />
       <Team />
       <Contact />
+      <Newsletter />
       
     </div>
   );
