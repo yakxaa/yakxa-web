@@ -5,6 +5,17 @@
   text-align: center;
 }
 
+
+#teamList::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+#teamList {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
 /* .logo {
   height: 6em;
   padding: 1.5em;

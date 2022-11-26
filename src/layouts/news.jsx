@@ -1,10 +1,10 @@
 function Newsletter(props){
 	return(
 		<div className="w-full h-32 overflow-hidden relative">
-			<div className="w-2/5 h-full bg-[#A7F393] absolute z-0">
+			<div className="w-3/5 h-full bg-[#A7F393] absolute z-0">
 				{/* -rotate-[50deg] -translate-x-20 -translate-y-40 */}
 				</div>
-			<div className="w-1/5 h-full bg-[#A7F393] -rotate-[30deg] right-1/2 absolute z-0"	></div>
+			<div className="w-1/5 h-full bg-[#A7F393] -rotate-[30deg] left-1/2 absolute z-0"	></div>
 			<div className="absolute z-10 flex flex-row justify-between mx-20 items-center w-full h-full">
 				<div className="text-left flex flex-col justify-center">
 					<p className="text-4xl font-semibold">Newsletter</p>

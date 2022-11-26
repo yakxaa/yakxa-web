@@ -21,7 +21,7 @@ const statsData = [
 
 function About(props) {
   return (
-    <div className="flex flex-col items-center ">
+    <div className="flex flex-col items-center mt-12 " id="about">
       <AboutEntrySection />
       <img src="src\assets\about_us_banner.png" className="my-20 w-full" />
       <AboutSection headingTop="our" headingBottom="Mission">

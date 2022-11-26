@@ -6,7 +6,7 @@ import TeamList from "../components/team_list";
 
 function Team(props) {
 	return (
-		<div className="my-20 flex flex-col items-center">
+		<div className="my-20 flex flex-col items-center" id="team">
 			<AboutHeading top="meet" bottom="The Team"/>
 			<TeamList/>		
 			</div>

@@ -14,12 +14,26 @@ function InputField(props) {
   );
 }
 
+const images = [
+  "src\\assets\\srishti.png",
+  "src\\assets\\deep.png",
+  "src\\assets\\suryakant.png",
+  "src\\assets\\swarup.png",
+  "src\\assets\\vineet.png", 
+];
+
 function Contact(props) {
   return (
-    <div className="bg-black w-full min-h-screen  flex flex-row">
+    <div className="bg-black w-full min-h-screen  flex flex-row" id="contact">
       <div className="basis-1/2 pl-20 pt-12">
-        <div className="w-full h-20 bg-[#FDA0B9]">
-          <p>Todo: Add Image</p>
+        <div className="relative w-full h-24">
+        <div className="bg-[#FDA0B9] w-full h-20 absolute z-10 bottom-0"></div>
+        <div className="w-full h-24 flex flex-row items-end justify-center absolute z-20">
+         
+            {images.map((link) => {return <img src={link} className="h-full -mr-2"></img>} )}
+
+          
+        </div>
         </div>
         <p className="text-white text-left text-4xl pt-8 pr-20 font-medium leading-[50px]">
           We'd love to hear from you!
