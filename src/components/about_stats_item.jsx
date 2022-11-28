@@ -1,6 +1,6 @@
 function AboutStatsItem(props){
 	return (
-		<div className="text-left text-white basis-52 ">
+		<div className="text-left text-white basis-52 px-4">
 			<p className="text-sm">
 				{props.top}
 			</p>

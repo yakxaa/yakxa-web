@@ -23,7 +23,10 @@ function About(props) {
   return (
     <div className="flex flex-col items-center mt-12 " id="about">
       <AboutEntrySection />
-      <img src="src\assets\about_us_banner.png" className="my-20 w-full" />
+      <img src="src\assets\about_us_banner.png" className="my-8 md:my-20 w-full" />
+      <div className="md:hidden text-left px-8 md:px-20 pb-8 md:pb-12">
+				<p>Yakxa is a one-stop solution for making your content truly global and available with our smart and AI backed dubbing methodologies that transcribes translates as well as add narration with care to your content</p>
+			</div>
       <AboutSection headingTop="our" headingBottom="Mission">
         <p>
           Yaksha strives to use industry-leading AI techniques and algorithms
@@ -33,9 +36,8 @@ function About(props) {
           content.
         </p>
       </AboutSection>
-      <p className="text-4xl w-3/5 my-24">
-        Yakxa is something some words, more words, for you , some more words,
-        words and all.
+      <p className="text-3xl my-12 mx-4 md:text-4xl md:w-3/5 md:my-24">
+        Reach a wider audience with unimaginable speed and zero effort
       </p>
       <AboutSection headingTop="why" headingBottom="Choose Us">
         <p>

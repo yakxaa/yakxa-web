@@ -12,7 +12,7 @@ function TeamImage(props){
 
 function TeamCard(props){
 	return (
-		<div className="flex flex-col items-start w-48">
+		<div className="flex flex-col items-start min-w-[190px] m-auto">
 			<TeamImage color={props.color} img={props.img}/>
 		
 			<p className="text-left font-semibold text-2xl">{props.name}</p>

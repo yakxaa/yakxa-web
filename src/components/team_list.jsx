@@ -107,8 +107,8 @@ const teamMemberList = [
 function TeamList(props){
 	return(
 		
-		<div className="ml-20 mr-14 mt-12">
-		<div className="grid grid-cols-5 w-full overflow-x-auto gap-x-[150px]" id="teamList">
+		<div className="ml-8 mr-4 mt-8 md:ml-20 md:mr-14 md:mt-12">
+		<div className=" flex w-full overflow-x-auto gap-x-[75px] justify-start" id="teamList">
 			
 				{teamMemberList.map((member) => {
 					return <TeamCard name={member.name} description={member.description} color={member.color} social={member.social} img={member.img}/>
@@ -120,3 +120,5 @@ function TeamList(props){
 }
 
 export default TeamList;
+
+//grid grid-cols-[repeat(5,12rem)]

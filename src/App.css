@@ -1,8 +1,10 @@
 #root {
-  /* max-width: 1280px; */
+  max-width: 100%;
   margin: 0 auto;
   /* padding: 2rem; */
   text-align: center;
+  width: 100%;
+  overflow: hidden;
 }
 
 
@@ -11,10 +13,12 @@
 }
 
 /* Hide scrollbar for IE, Edge and Firefox */
-#teamList {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
-}
+ #teamList {
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+ } 
 
 /* .logo {
   height: 6em;

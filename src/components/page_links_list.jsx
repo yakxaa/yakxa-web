@@ -20,9 +20,9 @@ var PageLinksList = [
 
 const PageLinks = (props) => {
 	return (
-		<div className={"flex flex-row " + props.className}>
+		<div className={"flex flex-row max-md:justify-around " + props.className}>
 			{ PageLinksList.map((pageLink) => {
-				return <a className="text-black pl-8 hover:text-black hover:underline  hover:cursor-pointer" href={pageLink.link}>{pageLink.name}</a>
+				return <a className="text-black md:pl-8 hover:text-black hover:underline  hover:cursor-pointer" href={pageLink.link}>{pageLink.name}</a>
 			})}
 		</div>
 	);

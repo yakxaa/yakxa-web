@@ -24,12 +24,13 @@ const roundButtonList = [
 
 const Footer = (props) => {
 	return(
-		<div className="flex flex-row px-20 py-12 justify-between items-center">
+		<div className="flex flex-col md:flex-row p-4 md:px-20 md:py-12 justify-between md:items-center">
+			<div className="max-md:mb-8">
 			<Logo />
-			
+			</div>
 			<PageLinks />
-			<div>
-				<p className="text-left font-bold">FOLLOW US</p>
+			<div className="max-md:mt-8 max-md:self-center">
+				<p className="text-center md:text-left font-bold">FOLLOW US</p>
 				<RoundButton roundButtonList={roundButtonList}/>
 			</div>
 			
