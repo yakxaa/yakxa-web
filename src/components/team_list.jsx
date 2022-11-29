@@ -7,100 +7,45 @@ const teamMemberList = [
 		name : "Suryakant A.",
 		description : "Founder and such",
 		color : "A7F393",
-		img : "src\\assets\\suryakant.png",
-		social : [
-			{
-				link: "instagram.suryakant.dev",
-				icon: <FbLogo height="20" /> ,
-			},
-			{
-				link: "instagram.suryakant.dev",
-				icon: <FbLogo height="20" /> ,
-			},
-			{
-				link: "instagram.suryakant.dev",
-				icon: <FbLogo height="20" /> ,
-			},
-		]
+		img : "assets/suryakant.png",
+		instagram : "https:\\\\instagram.suryakant.dev",
+		twitter : "https:\\\\instagram.suryakant.dev",
+		linkedin : "https:\\\\instagram.suryakant.dev",
 	},
 	{
 		name : "Deep G.",
 		description : "Solves Megaminx",
 		color : "FDA0B9",
-		img : "src\\assets\\deep.png",
-		social : [
-			{
-				link: "instagram.suryakant.dev",
-				icon: <FbLogo height="20" /> ,
-			},
-			{
-				link: "instagram.suryakant.dev",
-				icon: <FbLogo height="20" /> ,
-			},
-			{
-				link: "instagram.suryakant.dev",
-				icon: <FbLogo height="20" /> ,
-			},
-		]
+		img : "assets/deep.png",
+		instagram : "https:\\\\instagram.suryakant.dev",
+		twitter : "https:\\\\instagram.suryakant.dev",
+		linkedin : "https:\\\\instagram.suryakant.dev",
 	},
 	{
 		name : "Swarup K.",
 		description : "Basically, Awesome",
 		color : "FFCF77",
-		img : "src\\assets\\swarup.png",
-		social : [
-			{
-				link: "instagram.suryakant.dev",
-				icon: <FbLogo height="20" /> ,
-			},
-			{
-				link: "instagram.suryakant.dev",
-				icon: <FbLogo height="20" /> ,
-			},
-			{
-				link: "instagram.suryakant.dev",
-				icon: <FbLogo height="20" /> ,
-			},
-		]
+		img : "assets/swarup.png",
+		instagram : "https:\\\\instagram.suryakant.dev",
+		twitter : "https:\\\\instagram.suryakant.dev",
+		linkedin : "https:\\\\instagram.suryakant.dev",
 	},
 	{
 		name : "Vineet R.",
 		description : "Microsoft Engage",
 		color : "E9BEF9",
-		img : "src\\assets\\vineet.png",
-		social : [
-			{
-				link: "instagram.suryakant.dev",
-				icon: <FbLogo height="20" /> ,
-			},
-			{
-				link: "instagram.suryakant.dev",
-				icon: <FbLogo height="20" /> ,
-			},
-			{
-				link: "instagram.suryakant.dev",
-				icon: <FbLogo height="20" /> ,
-			},
-		]
+		img : "assets/vineet.png",
+		instagram : "https:\\\\instagram.suryakant.dev",
+		twitter : "https:\\\\instagram.suryakant.dev",
+		linkedin : "https:\\\\instagram.suryakant.dev",
 	},{
 		name : "Srishti C.",
 		description : "Does Something",
 		color : "9DDADB",
-		img : "src\\assets\\srishti.png",
-		social : [
-			{
-				link: "instagram.suryakant.dev",
-				icon: <FbLogo height="20" /> ,
-			},
-			{
-				link: "instagram.suryakant.dev",
-				icon: <FbLogo height="20" /> ,
-			},
-			{
-				link: "instagram.suryakant.dev",
-				icon: <FbLogo height="20" /> ,
-			},
-		]
+		img : "assets/srishti.png",
+		instagram : "https:\\\\instagram.suryakant.dev",
+		twitter : "https:\\\\instagram.suryakant.dev",
+		linkedin : "https:\\\\instagram.suryakant.dev",
 	},
 ]
 
@@ -111,7 +56,7 @@ function TeamList(props){
 		<div className=" flex w-full overflow-x-auto gap-x-[75px] justify-start" id="teamList">
 			
 				{teamMemberList.map((member) => {
-					return <TeamCard name={member.name} description={member.description} color={member.color} social={member.social} img={member.img}/>
+					return <TeamCard member={member}/>
 				})}
 			
 			

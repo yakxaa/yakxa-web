@@ -1,23 +1,28 @@
 import Logo from "../components/logo";
 import PageLinks from "../components/page_links_list"
 import RoundButton from "../components/round_button_array";
-import { ReactComponent as FbLogo } from "../assets/facebook_logo.svg";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faFacebookF } from '@fortawesome/free-brands-svg-icons'
+import { faTwitter } from '@fortawesome/free-brands-svg-icons'
+import { faInstagram } from '@fortawesome/free-brands-svg-icons'
+import { faYoutube } from '@fortawesome/free-brands-svg-icons'
+
 
 const roundButtonList = [
 	{
-		icon : <FbLogo height="20"/>,
+		icon : <FontAwesomeIcon icon={faFacebookF} color="#fff"/>,
 		link : "http://www.facebook.com"
 	},
 	{
-		icon : <FbLogo height="20"/>,
+		icon : <FontAwesomeIcon icon={faTwitter} color="#fff"/>,
 		link : "www.facebook.com"
 	},
 	{
-		icon :<FbLogo height="20"/>,
+		icon :<FontAwesomeIcon icon={faInstagram} color="#fff"/>,
 		link : "www.facebook.com"
 	},
 	{
-		icon :<FbLogo height="20"/>,
+		icon :<FontAwesomeIcon icon={faYoutube} color="#fff"/>,
 		link : "www.facebook.com"
 	},
 ]

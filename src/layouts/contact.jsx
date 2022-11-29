@@ -8,15 +8,15 @@ import axios from 'axios';
 
 function InputField(props) {
   return (
-    <div className="flex flex-col items-start max-md:py-2">
-      <label htmlFor={props.id} className="font-semibold text-xs mb-1">
+    <div className="flex flex-col items-start max-md:py-4">
+      <label htmlFor={props.id} className="font-semibold mb-2">
         {props.label.toUpperCase()}
       </label>
       <Field type={props.type}
         name={props.id}
         id={props.id}
         placeholder={props.placeholder}
-        className={`text-xs border-b-2 focus:outline-0 w-full focus:border-b-2 focus:border-black leading-6 ${(props.err ? "border-red-400" : "")}`} />
+        className={` border-b-2 focus:outline-0 w-full focus:border-b-2 focus:border-black leading-6 ${(props.err ? "border-red-400" : "")}`} />
 
       <div className={(props.err) ? "text-red-400 text-xs" : "hidden"} >
 
@@ -60,7 +60,7 @@ const ContactForm = (props) => {
   }
 
   const submitForm = async (values) => {
-    const baseUrl = "https://yaxka-backend.azurewebsites.net/"
+    const baseUrl = import.meta.env.VITE_BE_BASE_URL
 
     const { first_name, last_name, email, organization_name, message, video_link, phone } = values
 
@@ -108,7 +108,7 @@ const ContactForm = (props) => {
           const { handleChange, values, errors, touched, isValid, dirty } = formik;
           return <Form>
             <div className=" md:grid grid-cols-2 grid-rows-auto gap-y-4 gap-x-8">
-              <p className="text-left font-medium text-xl col-start-1 col-end-3">
+              <p className="text-left font-medium text-2xl col-start-1 col-end-3">
                 Contact Us
               </p>
               <InputField
@@ -161,7 +161,7 @@ const ContactForm = (props) => {
                   onChange={handleChange}
 
                 />
-                <label htmlFor="newsletter" className="text-xs font-medium ml-2">
+                <label htmlFor="newsletter" className=" font-medium ml-2">
                   Subscribe to our Newsletter
                 </label>
               </div>
@@ -184,18 +184,18 @@ const ContactForm = (props) => {
 
 
 const images = [
-  "src\\assets\\srishti.png",
-  "src\\assets\\deep.png",
-  "src\\assets\\suryakant.png",
-  "src\\assets\\swarup.png",
-  "src\\assets\\vineet.png",
+  "assets/deep.png",
+  "assets/suryakant.png",
+  "assets/swarup.png",
+  "assets/vineet.png",
+  "assets/srishti.png",
 ];
 
 function Contact(props) {
   return (
     <div className="bg-black w-full min-h-screen  flex flex-col md:flex-row" id="contact">
       <ToastContainer />
-      <div className="md:basis-1/2 px-8 pt-4 md:px-12 md:pl-20 md:pr-0 md:pt-12">
+      <div className="md:basis-1/2 px-8 pt-4  md:pl-20 md:pt-12 md:pr-20">
         <div className="relative w-full h-24">
           <div className="bg-[#FDA0B9] w-full h-20 absolute z-10 bottom-0"></div>
           <div className="w-full h-24 flex flex-row items-end justify-center absolute z-20">
@@ -205,10 +205,10 @@ function Contact(props) {
 
           </div>
         </div>
-        <p className="text-white text-left text-4xl pt-8 md:pr-20 font-medium leading-[50px]">
+        <p className="text-white text-left text-5xl pt-8 md:pr-20 font-medium leading-[50px]">
           We'd love to hear from you!
         </p>
-        <p className="text-white text-sm text-left pt-2">
+        <p className="text-white text-left pt-4">
           Whether you have a question about features, trials, pricing, need a
           demo, or anything else, our team is ready to answer all your
           questions.

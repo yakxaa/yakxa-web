@@ -9,7 +9,7 @@ function Newsletter(props){
 
 	const submit = async (event) => {
 
-		const baseUrl = "https://yaxka-backend.azurewebsites.net/"
+		const baseUrl = import.meta.env.VITE_BE_BASE_URL
 
 		try {
       
@@ -42,14 +42,14 @@ function Newsletter(props){
 	}
 
 	return(
-		<div className="w-full h-48 md:h-32 overflow-hidden relative ">
+		<div className="w-full h-48 md:h-36 overflow-hidden relative ">
 			<div className="w-full md:w-3/5 h-full bg-[#A7F393] absolute z-0">
 				{/* -rotate-[50deg] -translate-x-20 -translate-y-40 */}
 				</div>
 			<div className="max-md:hidden w-1/5 h-full bg-[#A7F393] -rotate-[30deg] left-1/2 absolute z-0"	></div>
 			<div className="absolute z-10 flex max-md:flex-col md:flex-row md:justify-between md:items-center w-full h-full right-0">
 				<div className="text-left flex flex-col justify-center px-4 md:pl-20 max-md:pt-4">
-					<p className="text-4xl font-semibold">Newsletter</p>
+					<p className="text-4xl md:text-5xl font-semibold pb-2">Newsletter</p>
 					<p>Want to know what we're upto?</p> 
 					<p>Sign up for the newsletter to stay updated!</p>	
 

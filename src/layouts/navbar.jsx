@@ -4,7 +4,7 @@ import PageLinks from "../components/page_links_list";
 
 const Navbar = () => {
 	return (
-		<div className="flex flex-row justify-between my-4 mx-8 md:my-8 md:mx-20">
+		<div className="flex flex-row items-center justify-between my-4 mx-8 md:my-8 md:mx-20">
 			<Logo />
 			<div className="max-md:hidden">
 			<PageLinks />

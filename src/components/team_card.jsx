@@ -1,4 +1,8 @@
 import RoundButton from "./round_button_array";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faTwitter } from '@fortawesome/free-brands-svg-icons'
+import { faInstagram } from '@fortawesome/free-brands-svg-icons'
+import { faLinkedin } from '@fortawesome/free-brands-svg-icons'
 
 function TeamImage(props){
 	return (
@@ -13,11 +17,24 @@ function TeamImage(props){
 function TeamCard(props){
 	return (
 		<div className="flex flex-col items-start min-w-[190px] m-auto">
-			<TeamImage color={props.color} img={props.img}/>
+			<TeamImage color={props.member.color} img={props.member.img}/>
 		
-			<p className="text-left font-semibold text-2xl">{props.name}</p>
-			<p>{props.description}</p>
-			<RoundButton roundButtonList={props.social} />
+			<p className="text-left font-semibold text-2xl">{props.member.name}</p>
+			<p>{props.member.description}</p>
+			<RoundButton roundButtonList={[
+				{
+					link: props.member.instagram,
+					icon: <FontAwesomeIcon icon={faInstagram} color="#fff" />
+				},
+				{
+					link: props.member.twitter,
+					icon: <FontAwesomeIcon icon={faTwitter} color="#fff" />
+				},
+				{
+					link: props.member.linkedin,
+					icon: <FontAwesomeIcon icon={faLinkedin} color="#fff" />
+				},
+			]} />
 			
 		</div>
 		

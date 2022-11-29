@@ -1,6 +1,6 @@
 const Logo = (props) => {
 	return(
-		<p className="font-extrabold  text-4xl">yakxa</p>
+		<p className="font-extrabold  text-4xl md:text-5xl">yakxa</p>
 	);
 }
 
