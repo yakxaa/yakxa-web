@@ -3,8 +3,10 @@ import Switch from "react-switch";
 
 const DemoControls = (props) => {
   return (
-    <div className='bg-[#272A30] py-3 px-3'>
-      <p className='font-semibold text-white'>{props.controlName}</p>
+    <div className='bg-[#272A30] py-2 px-2 mb-3 md:py-3 md:px-3 md:my-6'>
+      <p className='font-semibold text-sm md:text-md text-white'>
+        {props.controlName}
+      </p>
       <select
         className='block w-full py-2 text-white text-md bg-[#272A30]'
         name={props.name}
@@ -45,17 +47,17 @@ const Demo = (props) => {
   const [gender, changeGenderTo] = useState(voice[0]);
   const [category, changeCategoryTo] = useState(categories[0]);
   return (
-    <div className='pt-10 md:pt-20 pl-5 pr-5 bg-black h-screen'>
+    <div className='py-10 md:py-32 px-5 bg-black'>
       <p className='text-3xl md:text-5xl font-medium text-white'>
         Try it yourself!
       </p>
-      <p className='py-1 text-white text-sm'>
+      <p className='py-4 md:text-2xl text-white text-md'>
         Select the desired settings and hit play
       </p>
       <div
-        className='pt-10 md:pt-20 flex flex-col-reverse justify-between md:flex-row bg-black lg:mt-20 mb:mt-5 sm:mt-1'
+        className='md:px-20 flex flex-col-reverse justify-between md:flex-row bg-black lg:mt-10 mb:mt-5'
         id='demo'>
-        <div className='md:basis-1/2 p-8 md:p-10 text-left'>
+        <div className='basis:1/2 md:basis-1/3 p-8 text-left'>
           <DemoControls
             id='lang'
             name='languages'
@@ -94,12 +96,14 @@ const Demo = (props) => {
           />
         </div>
         <iframe
-          className='max-md:px-8 basis-1/2'
+          className='max-md:px-8 basis:1/2 md:basis-2/3'
           src={links[lang][gender]}
           title='YouTube video player'
           frameBorder='0'
           allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
-          allowfullscreen></iframe>
+          allowfullscreen>
+          {" "}
+        </iframe>
       </div>
     </div>
   );
