@@ -2,10 +2,9 @@
 module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
-    extend: {
-    },
+    extend: {},
   },
-  plugins: [],
+  plugins: [require("ps-scrollbar-tailwind")],
   safelist: [
     "bg-[#FFCF77]",
     "bg-[#E9BEF9]",
