@@ -21,13 +21,18 @@ const statsData = [
 
 function About(props) {
   return (
-    <div className="flex flex-col items-center mt-12 " id="about">
+    <div className='flex flex-col items-center mt-12 ' id='about'>
       <AboutEntrySection />
-      <img src="assets/about_us_banner.png" className="my-8 md:my-20 w-full" />
-      <div className="md:hidden text-left px-8 md:px-20 pb-8 md:pb-12">
-				<p>Yakxa is a one-stop solution for making your content truly global and available with our smart and AI backed dubbing methodologies that transcribes translates as well as add narration with care to your content</p>
-			</div>
-      <AboutSection headingTop="our" headingBottom="Mission">
+      <img src='assets/about_us_banner.png' className='my-8 md:my-20 w-full' />
+      <div className='md:hidden text-left px-8 md:px-20 pb-8 md:pb-12'>
+        <p>
+          Yakxa is a one-stop solution for making your content truly global and
+          available with our smart and AI backed dubbing methodologies that
+          transcribes translates as well as add narration with care to your
+          content
+        </p>
+      </div>
+      <AboutSection headingTop='our' headingBottom='Mission'>
         <p>
           Yaksha strives to use industry-leading AI techniques and algorithms
           along with quality checks and validation by linguistic specialists to
@@ -36,10 +41,10 @@ function About(props) {
           content.
         </p>
       </AboutSection>
-      <p className="text-3xl my-12 mx-4 md:text-5xl md:w-3/5 md:my-24">
+      <p className='text-3xl my-12 mx-4 md:text-5xl md:w-3/5 md:my-24'>
         Reach a wider audience with unimaginable speed and zero effort
       </p>
-      <AboutSection headingTop="why" headingBottom="Choose Us">
+      <AboutSection headingTop='why' headingBottom='Choose Us'>
         <p>
           With over xyz+ languages to select from and voices that is close to
           your content yaksha provides verified and aided transcription to
@@ -53,7 +58,7 @@ function About(props) {
         })}
       </AboutStats>
 
-      <AboutSection headingTop="our" headingBottom="Features">
+      <AboutSection headingTop='our' headingBottom='Features'>
         <FeatureGrid />
       </AboutSection>
     </div>
