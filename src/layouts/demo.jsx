@@ -47,7 +47,9 @@ const Demo = (props) => {
   const [gender, changeGenderTo] = useState(voice[0]);
   const [category, changeCategoryTo] = useState(categories[0]);
   return (
-    <div className='py-10 md:py-32 px-5 bg-black'>
+	<div className="bg-black">
+	<div className="bg-[url('/assets/demo-bg.png')] bg-cover">
+    <div className="py-10 md:py-32 px-5  min-h-screen bg-gradient-to-tr from-black to-transparent">
       <p className='text-3xl md:text-5xl font-medium text-white'>
         Try it yourself!
       </p>
@@ -55,7 +57,7 @@ const Demo = (props) => {
         Select the desired settings and hit play
       </p>
       <div
-        className='md:px-20 flex flex-col-reverse justify-between md:flex-row bg-black lg:mt-10 mb:mt-5'
+        className='md:px-20 flex flex-col-reverse justify-between md:flex-row lg:mt-10 mb:mt-5'
         id='demo'>
         <div className='basis:1/2 md:basis-1/3 p-8 text-left'>
           <DemoControls
@@ -106,6 +108,7 @@ const Demo = (props) => {
         </iframe>
       </div>
     </div>
+	</div></div>
   );
 };
 

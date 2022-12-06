@@ -193,7 +193,8 @@ const images = [
 
 function Contact(props) {
   return (
-    <div className="bg-black w-full min-h-screen  flex flex-col md:flex-row" id="contact">
+    <div className="bg-black bg-[url('/assets/demo-bg.png')] bg-cover">
+    <div className=" w-full min-h-screen  flex flex-col md:flex-row  bg-gradient-to-tr from-black to-transparent" id="contact">
       <ToastContainer />
       <div className="md:basis-1/2 px-8 pt-4  md:pl-20 md:pt-12 md:pr-20">
         <div className="relative w-full h-24">
@@ -215,7 +216,7 @@ function Contact(props) {
         </p>
       </div>
       <ContactForm />
-    </div>
+    </div></div>
   );
 }
 
