@@ -238,13 +238,14 @@ const ContactForm = (props) => {
   );
 };
 
-const images = [
-  "assets/deep.png",
-  "assets/suryakant.png",
-  "assets/swarup.png",
-  "assets/vineet.png",
-  "assets/srishti.png",
-];
+// const images = [
+//   "assets/deep.png",
+//   "assets/suryakant.png",
+//   "assets/swarup.png",
+//   "assets/vineet.png",
+//   "assets/srishti.png",
+// ];
+
 const bannerImg = "src/assets/contact-us.png";
 
 function Contact(props) {
@@ -253,14 +254,10 @@ function Contact(props) {
       className='bg-black px-8 md:px-20 w-full min-h-screen py-8 md:py-20 flex flex-col md:flex-row'
       id='contact'>
       <ToastContainer />
-      <div className='md:basis-1/2 pt-4  md:mr-20 md:pt-12 justify-between'>
+      <div className='md:basis-1/2 md:mr-20 justify-between'>
         <div>
-          <div className='relative w-full h-24'>
-            <div className='bg-[#FDA0B9] w-full h-24 md:h-36 absolute z-10 bottom-0'></div>
-            <div className='w-full h-24 flex flex-row items-end justify-center absolute z-20'>
-              <img src={bannerImg} className='w-5/6 '></img>;
-            </div>
-          </div>
+          <img src={bannerImg} className='bottom-0'></img>
+
           <p className='text-white text-left text-3xl md:text-5xl pt-8 md:pr-20 font-medium leading-[50px]'>
             We'd love to hear from you!
           </p>
