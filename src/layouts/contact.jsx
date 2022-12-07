@@ -250,9 +250,10 @@ const bannerImg = "src/assets/contact-us.png";
 
 function Contact(props) {
   return (
-    <div
-      className='bg-black px-8 md:px-20 w-full min-h-screen py-8 md:py-20 flex flex-col md:flex-row'
-      id='contact'>
+
+    <div className="bg-black bg-[url('/assets/demo-bg.png')] bg-cover">
+    <div className="px-8 md:px-20 py-8 md:py-20 w-full min-h-screen  flex flex-col md:flex-row  bg-gradient-to-tr from-black to-transparent" id="contact">
+
       <ToastContainer />
       <div className='md:basis-1/2 md:mr-20 justify-between'>
         <div>
@@ -294,7 +295,7 @@ function Contact(props) {
       </div>
 
       <ContactForm />
-    </div>
+    </div></div>
   );
 }
 
