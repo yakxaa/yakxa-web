@@ -1,5 +1,5 @@
 import TeamCard from "./team_card";
-import { ReactComponent as FbLogo } from "../assets/facebook_logo.svg";
+
 
 const teamMemberList = [
   {
@@ -40,11 +40,11 @@ const teamMemberList = [
   },
   {
     name: "Srishti C.",
-    description: "Does Something",
+    description: "The Force is with her",
     color: "9DDADB",
     img: "assets/srishti.png",
     instagram: "https://www.instagram.com/millieonacloud/",
-    twitter: "https:\\\\instagram.suryakant.dev",
+    twitter: "https://twitter.com/",
     linkedin: "https://www.linkedin.com/in/srishti-chaurasia1806/",
   },
 ];

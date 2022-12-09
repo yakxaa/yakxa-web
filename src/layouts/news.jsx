@@ -1,6 +1,7 @@
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import axios from "axios";
+import { useState } from "react";
 
 function Newsletter(props) {
   const submit = async (event) => {
@@ -22,7 +23,7 @@ function Newsletter(props) {
           }
         );
 
-        if (responses[0].status === 200) toast("Subscribed Successfully");
+        if (responses[0].status === 201) toast("Subscribed Successfully");
         else toast("Error occured");
       }
     } catch (error) {
@@ -34,6 +35,9 @@ function Newsletter(props) {
     }
   };
 
+  const [isButtonDisabled , changeButtonDiabilityTo] = useState(false);
+
+
   return (
     <div className='bg-[#A7F393] py-3 px-8 md:px-20 flex max-md:flex-col md:flex-row md:justify-between md:items-center w-full h-full right-0'>
       <div className='text-left mr-5 md:py-10 flex flex-col justify-center max-md:pt-4'>
@@ -43,7 +47,12 @@ function Newsletter(props) {
       </div>
 
       <form
-        onSubmit={submit}
+        onSubmit={async (values) =>  {
+          changeButtonDiabilityTo(true);
+          await submit(values);
+          console.log("yes")
+          changeButtonDiabilityTo(false);
+        }}
         className='md:basis-3/5 flex flex-row justify-end pt-4 pb-4 md:pl-2'>
         <input
           type='text'
@@ -52,6 +61,7 @@ function Newsletter(props) {
           id='news_email'
         />
         <input
+          disabled={isButtonDisabled}
           type='submit'
           value='Subscribe'
           className='bg-black border-2 border-black text-white py-2 px-4 hover:bg-white hover:text-black hover:cursor-pointer ease-linear duration-100 hover:scale-105'

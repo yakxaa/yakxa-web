@@ -6,16 +6,16 @@ import FeatureGrid from "../components/feature_grid";
 
 const statsData = [
   {
-    top: "Lörem ipsum pott sebälogi. Res. Hundvissla räränt, i aska bevis.",
-    bottom: "200+",
+    top: "more than 50% of all YouTube views come from non English speakers",
+    bottom: "50%",
   },
   {
-    top: "Lörem ipsum pott sebälogi. Res. Hundvissla räränt, i aska bevis.",
-    bottom: "20+",
+    top: "68% of online customers like to interact with brands in their local language",
+    bottom: "68%",
   },
   {
-    top: "Lörem ipsum pott sebälogi. Res. Hundvissla räränt, i aska bevis.",
-    bottom: "30+",
+    top: "64% of consumers would pay more for a service that spoke their language",
+    bottom: "64%",
   },
 ];
 
@@ -25,31 +25,23 @@ function About(props) {
       <AboutEntrySection />
       <img src='assets/about_us_banner.png' className='my-8 md:my-20 w-full' />
       <div className='md:hidden text-left px-8 md:px-20 pb-8 md:pb-12'>
-        <p>
-          Yakxa is a one-stop solution for making your content truly global and
-          available with our smart and AI backed dubbing methodologies that
-          transcribes translates as well as add narration with care to your
-          content
+      <p className="font-semibold">
+        “The limits of my language mean the limits of my world.”</p> 
+        <p>At yakxa we aim to create a world without the limits of these linguistic barriers. Our AI backed dubbing methodologies and real time translation pipelines help us create a seamless user experience
         </p>
       </div>
       <AboutSection headingTop='our' headingBottom='Mission'>
         <p>
-          Yaksha strives to use industry-leading AI techniques and algorithms
-          along with quality checks and validation by linguistic specialists to
-          make the dubbing process simple, affordable, and accurate. This gives
-          us confidence that our product accurately captures the essence of your
-          content.
+        We all have been fascinated by the fact that the world is becoming a global village but what stops us from becoming a global community is the lack of common language or lack of common understanding .Our motivation here is to make sure that no content, idea or inspiration stays out of your reach because of lack of this understanding
         </p>
       </AboutSection>
       <p className='text-3xl my-12 mx-4 md:text-5xl md:w-3/5 md:my-24'>
-        Reach a wider audience with unimaginable speed and zero effort
+      Connecting people, connecting communities, connecting the world to you.
       </p>
       <AboutSection headingTop='why' headingBottom='Choose Us'>
         <p>
-          With over xyz+ languages to select from and voices that is close to
-          your content yaksha provides verified and aided transcription to
-          provide assurance that your content doesn’t lose its essence but at
-          the same time reflect the uniqueness in target language
+        Reach a wider audience with lightning speed and zero effort. Providing over 40+ languages to select from and voices that suit the content. Yakxa ensures that the essence and meaning of your content remains intact and at the same time reflect the uniqueness in the dubbed language
+
         </p>
       </AboutSection>
       <AboutStats>

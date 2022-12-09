@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Switch from "react-switch";
+import {languages , voice , categories ,links} from "../model/demo_video"
 
 const DemoControls = (props) => {
   return (
@@ -18,29 +18,29 @@ const DemoControls = (props) => {
   );
 };
 
-const languages = ["Punjabi", "Tamil", "English", "Hindi"];
-const voice = ["Female", "Male"];
-const categories = ["Interview", "Voice Over", "Speech", "Animation"];
+// const languages = ["Punjabi", "Tamil", "English", "Hindi"];
+// const voice = ["Female", "Male"];
+// const categories = ["Interview", "Voice Over", "Speech", "Animation"];
 
-const links = {
-  Punjabi: {
-    Male: "https://www.youtube.com/embed/eBGIQ7ZuuiU",
-    Female: "https://www.youtube.com/embed/4NRXx6U8ABQ",
-  },
+// const links = {
+//   Punjabi: {
+//     Male: "https://www.youtube.com/embed/eBGIQ7ZuuiU",
+//     Female: "https://www.youtube.com/embed/4NRXx6U8ABQ",
+//   },
 
-  Tamil: {
-    Male: "https://www.youtube.com/embed/4NRXx6U8ABQ",
-    Female: "https://www.youtube.com/embed/eBGIQ7ZuuiU",
-  },
-  English: {
-    Male: "https://www.youtube.com/embed/nntGTK2Fhb0",
-    Female: "https://www.youtube.com/embed/UqyT8IEBkvY",
-  },
-  Hindi: {
-    Male: "https://www.youtube.com/embed/nntGTK2Fhb0",
-    Female: "https://www.youtube.com/embed/UqyT8IEBkvY",
-  },
-};
+//   Tamil: {
+//     Male: "https://www.youtube.com/embed/4NRXx6U8ABQ",
+//     Female: "https://www.youtube.com/embed/eBGIQ7ZuuiU",
+//   },
+//   English: {
+//     Male: "https://www.youtube.com/embed/nntGTK2Fhb0",
+//     Female: "https://www.youtube.com/embed/UqyT8IEBkvY",
+//   },
+//   Hindi: {
+//     Male: "https://www.youtube.com/embed/nntGTK2Fhb0",
+//     Female: "https://www.youtube.com/embed/UqyT8IEBkvY",
+//   },
+// };
 
 const Demo = (props) => {
   const [lang, changeLangTo] = useState(languages[0]);
@@ -66,7 +66,7 @@ const Demo = (props) => {
                   console.log(lang);
                 }}
                 items={languages.map((lang) => {
-                  return <option value={lang}>{lang}</option>;
+                  return <option disabled={!(lang in links[category])} value={lang}>{lang}</option>;
                 })}
                 controlName='SELECT LANGUAGE'
               />
@@ -78,7 +78,7 @@ const Demo = (props) => {
                   console.log(gender);
                 }}
                 items={voice.map((voice) => {
-                  return <option value={voice}>{voice}</option>;
+                  return <option disabled={!(voice in links[category][lang])} value={voice}>{voice}</option>;
                 })}
                 controlName='CHOOSE VOICE'
               />
@@ -90,14 +90,14 @@ const Demo = (props) => {
                   console.log(category);
                 }}
                 items={categories.map((category) => {
-                  return <option value={category}>{category}</option>;
+                  return <option disabled= {!(category in links)}value={category}>{category}</option>;
                 })}
                 controlName='CHOOSE VIDEO CATEGORY'
               />
             </div>
             <iframe
               className='aspect-video m-8 basis:1/2 md:aspect-video md:basis-2/3'
-              src={links[lang][gender]}
+              src={links[category][lang][gender]}
               title='YouTube video player'
               frameBorder='0'
               allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'

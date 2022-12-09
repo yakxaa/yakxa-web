@@ -3,23 +3,27 @@ import FeatureGridItem from "./feature_grid_item";
 const features = [
 	{
 		heading: "Natural Voices",
-		desc: "Feature description, this shiz be dope yo. "
+		desc: "Nobody would be able to tell the difference"
 	},
 	{
 		heading: "40+ Languages",
-		desc: "Feature description, this shiz be dope yo. "
+		desc: "There is something for everyone"
 	},
 	{
 		heading: "Multispeaker Support",
-		desc: "Feature description, this shiz be dope yo. "
+		desc: "Cut the clutter"
 	},
 	{
 		heading: "Blazing Fast",
-		desc: "Feature description, this shiz be dope yo. "
+		desc: "So that you’re always on time"
 	},
 	{
 		heading: "Lip Sync",
-		desc: "Feature description, this shiz be dope yo. "
+		desc: "Lips can make a difference ;)"
+	},
+	{
+		heading: "Minimal Difference",
+		desc: "Your content. Just as you intended"
 	},
 ]
 

@@ -3,6 +3,7 @@ import * as Yup from "yup";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import axios from "axios";
+import { useState } from "react";
 
 const email = "contact@yakxa.in";
 const mobile = "7828369492";
@@ -129,7 +130,7 @@ const ContactForm = (props) => {
 
       if (
         responses[0].status === 201 &&
-        (responses[1] ? responses[1].status === 200 : true)
+        (responses[1] ? responses[1].status === 201 : true)
       )
         toast("Submitted Successfully");
       else toast("Error occured");
@@ -138,12 +139,20 @@ const ContactForm = (props) => {
       toast("An error occured");
     }
   };
+
+  const [isButtonDisabled , changeButtonDiabilityTo] = useState(false);
+
   return (
     <div className='md:basis-1/2 bg-white px-6 py-8 mt-5 md:mt-0 md:p-12'>
       <Formik
         initialValues={initialValues}
         validationSchema={contactUsSchema}
-        onSubmit={submitForm}>
+        onSubmit={async (values) =>  {
+          changeButtonDiabilityTo(true);
+          await submitForm(values);
+          console.log("yes")
+          changeButtonDiabilityTo(false);
+        }}>
         {(formik) => {
           const { handleChange, values, errors, touched, isValid, dirty } =
             formik;
@@ -227,6 +236,7 @@ const ContactForm = (props) => {
                 </div>
                 <div className='col-start-1 col-end-3'>
                   <input
+                    disabled={isButtonDisabled}
                     type='submit'
                     value='Submit'
                     className='bg-black border-2 border-black text-white py-2 px-4 hover:bg-transparent hover:text-black hover:cursor-pointer ease-linear duration-100 hover:scale-105'
@@ -246,7 +256,7 @@ function copy(text) {
   navigator.clipboard.writeText(text);
 }
 
-const bannerImg = "src/assets/contact-us.png";
+const bannerImg = "assets/contact-us.png";
 
 function Contact(props) {
   return (

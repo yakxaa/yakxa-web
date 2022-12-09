@@ -2,15 +2,15 @@ import Logo from "../components/logo";
 import PageLinks from "../components/page_links_list";
 import RoundButton from "../components/round_button_array";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faFacebookF } from "@fortawesome/free-brands-svg-icons";
+import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { faTwitter } from "@fortawesome/free-brands-svg-icons";
 import { faInstagram } from "@fortawesome/free-brands-svg-icons";
 import { faYoutube } from "@fortawesome/free-brands-svg-icons";
 
 const roundButtonList = [
   {
-    icon: <FontAwesomeIcon icon={faFacebookF} color='#fff' />,
-    link: "http://www.facebook.com",
+    icon: <FontAwesomeIcon icon={faYoutube} color='#fff' />,
+    link: "https://www.youtube.com/@yakxa3330",
   },
   {
     icon: <FontAwesomeIcon icon={faTwitter} color='#fff' />,
@@ -18,11 +18,11 @@ const roundButtonList = [
   },
   {
     icon: <FontAwesomeIcon icon={faInstagram} color='#fff' />,
-    link: "www.facebook.com",
+    link: "https://www.instagram.com/yakxa.in/",
   },
   {
-    icon: <FontAwesomeIcon icon={faYoutube} color='#fff' />,
-    link: "www.facebook.com",
+    icon: <FontAwesomeIcon icon={faLinkedin} color='#fff' />,
+    link: "https://www.linkedin.com/company/yakxa/",
   },
 ];
 
