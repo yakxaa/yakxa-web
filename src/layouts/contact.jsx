@@ -4,6 +4,9 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import axios from "axios";
 
+const email = "contact@yakxa.in";
+const mobile = "7828369492";
+
 function InputField(props) {
   return (
     <div className='flex flex-col items-start max-md:py-4'>
@@ -238,13 +241,10 @@ const ContactForm = (props) => {
   );
 };
 
-// const images = [
-//   "assets/deep.png",
-//   "assets/suryakant.png",
-//   "assets/swarup.png",
-//   "assets/vineet.png",
-//   "assets/srishti.png",
-// ];
+//copy to clipboard
+function copy(text) {
+  navigator.clipboard.writeText(text);
+}
 
 const bannerImg = "src/assets/contact-us.png";
 
@@ -273,9 +273,10 @@ function Contact(props) {
               <p className='text-left font-normal underline'>
                 <address>
                   <a
-                    href='mailto:srishti.chaurasia123@gmail.com'
-                    className='text-white'>
-                    contact@yakxa.in
+                    id='yakxaMail'
+                    href={`mailto: ${email}`}
+                    className='text-white hover:text-pink-300'>
+                    <span onClick={() => copy(email)}>{email}</span>
                   </a>
                 </address>
               </p>
@@ -283,10 +284,8 @@ function Contact(props) {
             <div className='mt-5'>
               <p className='text-white text-left font-semibold'>CALL US AT</p>
               <p className='text-left font-normal underline'>
-                <a
-                  href='mailto:srishti.chaurasia123@gmail.com'
-                  className='text-white'>
-                  7044546199
+                <a className='text-white hover:cursor-pointer hover:text-pink-300'>
+                  <span onClick={() => copy(mobile)}>{mobile}</span>
                 </a>
               </p>
             </div>
