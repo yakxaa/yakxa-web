@@ -36,7 +36,7 @@ function Newsletter(props) {
 
   return (
     <div className='bg-[#A7F393] py-3 px-8 md:px-20 flex max-md:flex-col md:flex-row md:justify-between md:items-center w-full h-full right-0'>
-      <div className='text-left md:py-10 flex flex-col justify-center max-md:pt-4'>
+      <div className='text-left mr-5 md:py-10 flex flex-col justify-center max-md:pt-4'>
         <p className='text-4xl md:text-5xl font-semibold pb-2'>Newsletter</p>
         <p>Want to know what we're upto?</p>
         <p>Sign up for the newsletter to stay updated!</p>
@@ -54,7 +54,7 @@ function Newsletter(props) {
         <input
           type='submit'
           value='Subscribe'
-          className='bg-black text-white py-2 px-4 '
+          className='bg-black border-2 border-black text-white py-2 px-4 hover:bg-white hover:text-black hover:cursor-pointer ease-linear duration-100 hover:scale-105'
         />
       </form>
     </div>

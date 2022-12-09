@@ -226,7 +226,7 @@ const ContactForm = (props) => {
                   <input
                     type='submit'
                     value='Submit'
-                    className='bg-black text-white py-2 px-4'
+                    className='bg-black border-2 border-black text-white py-2 px-4 hover:bg-transparent hover:text-black hover:cursor-pointer ease-linear duration-100 hover:scale-105'
                   />
                 </div>
               </div>
@@ -250,52 +250,52 @@ const bannerImg = "src/assets/contact-us.png";
 
 function Contact(props) {
   return (
-
     <div className="bg-black bg-[url('/assets/demo-bg.png')] bg-cover">
-    <div className="px-8 md:px-20 py-8 md:py-20 w-full min-h-screen  flex flex-col md:flex-row  bg-gradient-to-tr from-black to-transparent" id="contact">
-
-      <ToastContainer />
-      <div className='md:basis-1/2 md:mr-20 justify-between'>
-        <div>
-          <img src={bannerImg} className='bottom-0'></img>
-
-          <p className='text-white text-left text-3xl md:text-5xl pt-8 md:pr-20 font-medium leading-[50px]'>
-            We'd love to hear from you!
-          </p>
-          <p className='text-white text-sm md:text-md text-left pt-4'>
-            Whether you have a question about features, trials, pricing, need a
-            demo, or anything else, our team is ready to answer all your
-            questions.
-          </p>
-        </div>
-        <div className='md:basis-1/2 flex flex-row md:flex-col justify-between my-5'>
-          <div className='mt-5'>
-            <p className='text-white text-left font-semibold'>EMAIL US AT</p>
-            <p className='text-left font-normal underline'>
-              <address>
+      <div
+        className='px-8 md:px-20 py-8 md:py-20 w-full flex flex-col lg:flex-row  bg-gradient-to-tr from-black to-transparent'
+        id='contact'>
+        <ToastContainer />
+        <div className='md:basis-1/2 lg:mr-20 justify-between'>
+          <div>
+            <img src={bannerImg} className='bottom-0'></img>
+            <p className='text-white text-left text-3xl md:text-5xl pt-8 md:pr-20 font-medium leading-[50px]'>
+              We'd love to hear from you!
+            </p>
+            <p className='text-white text-sm md:text-md text-left pt-4'>
+              Whether you have a question about features, trials, pricing, need
+              a demo, or anything else, our team is ready to answer all your
+              questions.
+            </p>
+          </div>
+          <div className='md:basis-1/2 flex flex-row lg:flex-col justify-between my-5'>
+            <div className='mt-5'>
+              <p className='text-white text-left font-semibold'>EMAIL US AT</p>
+              <p className='text-left font-normal underline'>
+                <address>
+                  <a
+                    href='mailto:srishti.chaurasia123@gmail.com'
+                    className='text-white'>
+                    contact@yakxa.in
+                  </a>
+                </address>
+              </p>
+            </div>
+            <div className='mt-5'>
+              <p className='text-white text-left font-semibold'>CALL US AT</p>
+              <p className='text-left font-normal underline'>
                 <a
                   href='mailto:srishti.chaurasia123@gmail.com'
                   className='text-white'>
-                  contact@yakxa.in
+                  7044546199
                 </a>
-              </address>
-            </p>
-          </div>
-          <div className='mt-5'>
-            <p className='text-white text-left font-semibold'>CALL US AT</p>
-            <p className='text-left font-normal underline'>
-              <a
-                href='mailto:srishti.chaurasia123@gmail.com'
-                className='text-white'>
-                7044546199
-              </a>
-            </p>
+              </p>
+            </div>
           </div>
         </div>
-      </div>
 
-      <ContactForm />
-    </div></div>
+        <ContactForm />
+      </div>
+    </div>
   );
 }
 

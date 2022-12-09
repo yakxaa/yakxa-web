@@ -59,7 +59,9 @@ function About(props) {
       </AboutStats>
 
       <AboutSection headingTop='our' headingBottom='Features'>
-        <FeatureGrid />
+        <div className='mt-10 md:my-0'>
+          <FeatureGrid />
+        </div>
       </AboutSection>
     </div>
   );

@@ -29,7 +29,7 @@ const Hamburger = (props) => {
           <a
             className='text-left font-normal text-1xl text-black pl-2 py-4 hover:text-black hover:cursor-pointer '
             href={pageLink.link}>
-            <span class='link link-underline link-underline-black text-black'>
+            <span className='link link-underline link-underline-black text-black'>
               {pageLink.name}
             </span>
           </a>
