@@ -4,6 +4,7 @@ import { faTwitter } from "@fortawesome/free-brands-svg-icons";
 import { faInstagram } from "@fortawesome/free-brands-svg-icons";
 import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
 
+
 function TeamImage(props) {
   return (
     <div className='w-full h-40 relative'>

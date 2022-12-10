@@ -3,6 +3,8 @@ import AboutSection from "../components/about_section";
 import AboutStats from "../components/about_stats";
 import AboutStatsItem from "../components/about_stats_item";
 import FeatureGrid from "../components/feature_grid";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import 'react-lazy-load-image-component/src/effects/blur.css';
 
 const statsData = [
   {
@@ -23,7 +25,7 @@ function About(props) {
   return (
     <div className='flex flex-col items-center mt-12 ' id='about'>
       <AboutEntrySection />
-      <img src='assets/about_us_banner.png' className='my-8 md:my-20 w-full' />
+      <LazyLoadImage src='assets/about_us_banner.png' placeholderSrc="assets/about_us_banner_ph.jpg" effect="blur" className='my-8 md:my-20 w-full' />
       <div className='md:hidden text-left px-8 md:px-20 pb-8 md:pb-12'>
       <p className="font-semibold">
         “The limits of my language mean the limits of my world.”</p> 

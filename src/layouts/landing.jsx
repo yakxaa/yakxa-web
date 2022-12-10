@@ -1,4 +1,6 @@
 import Navbar from "./navbar";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import 'react-lazy-load-image-component/src/effects/blur.css';
 
 const Landing = () => {
   return (
@@ -15,7 +17,7 @@ const Landing = () => {
           Get Demo
         </button>
       </div>
-      <img src='assets\landing.png' className='w-full h-52 object-cover' />
+      <LazyLoadImage src='assets\landing.png' className='w-full h-52 object-cover' placeholderSrc="assets\landing_ph.jpg" effect="blur"/>
     </div>
   );
 };

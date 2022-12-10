@@ -4,6 +4,8 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import axios from "axios";
 import { useState } from "react";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import 'react-lazy-load-image-component/src/effects/blur.css';
 
 const email = "contact@yakxa.in";
 const mobile = "7828369492";
@@ -147,9 +149,10 @@ const ContactForm = (props) => {
       <Formik
         initialValues={initialValues}
         validationSchema={contactUsSchema}
-        onSubmit={async (values) =>  {
+        onSubmit={async (values , {resetForm}) =>  {
           changeButtonDiabilityTo(true);
           await submitForm(values);
+          resetForm();
           console.log("yes")
           changeButtonDiabilityTo(false);
         }}>
@@ -257,6 +260,7 @@ function copy(text) {
 }
 
 const bannerImg = "assets/contact-us.png";
+const bannerImgPh = "assets/contact-us_ph.png";
 
 function Contact(props) {
   return (
@@ -267,7 +271,7 @@ function Contact(props) {
         <ToastContainer />
         <div className='md:basis-1/2 lg:mr-20 justify-between'>
           <div>
-            <img src={bannerImg} className='bottom-0'></img>
+            <LazyLoadImage src={bannerImg} placeholderSrc={bannerImgPh} effect="blur" className='bottom-0'></LazyLoadImage>
             <p className='text-white text-left text-3xl md:text-5xl pt-8 md:pr-20 font-medium leading-[50px]'>
               We'd love to hear from you!
             </p>
