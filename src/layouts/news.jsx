@@ -23,7 +23,7 @@ function Newsletter(props) {
           }
         );
 
-        if (responses[0].status === 201) toast("Subscribed Successfully");
+        if (responses.status === 201) toast("Subscribed Successfully");
         else toast("Error occured");
       }
     } catch (error) {

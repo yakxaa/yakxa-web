@@ -16,7 +16,7 @@ const teamMemberList = [
     description: "Solves Megaminx",
     color: "FDA0B9",
     img: "assets/deep.png",
-    instagram: "https://www.instagram.com/deepg7v",
+    instagram: "https://www.instagram.com/deep_g7",
     twitter: "https://twitter.com/Deep17Gandhi",
     linkedin: "https://www.linkedin.com/in/deep-gandhi-574a19162/",
   },
@@ -26,7 +26,7 @@ const teamMemberList = [
     color: "FFCF77",
     img: "assets/swarup.png",
     instagram: "https://instagram.com/swarup_kharul/",
-    twitter: "https://instagram.com/swarup_kharul/",
+    twitter: "https://twitter.com/SwarupKharul",
     linkedin: "https://www.linkedin.com/in/swarupkharul",
   },
   {
