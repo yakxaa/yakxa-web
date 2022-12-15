@@ -1,19 +1,21 @@
+import {scroller} from "react-scroll";
+
 var PageLinksList = [
   {
     name: "Home",
-    link: "#about",
+    link: "about",
   },
   {
     name: "About Us",
-    link: "#about",
+    link: "about",
   },
   {
     name: "Team",
-    link: "#team",
+    link: "team",
   },
   {
     name: "Contact Us",
-    link: "#contact",
+    link: "contact",
   },
 ];
 
@@ -23,8 +25,13 @@ const PageLinks = (props) => {
       {PageLinksList.map((pageLink) => {
         return (
           <a
-            className='text-md sm:text-2xl text-black sm:px-4 hover:text-black'
-            href={pageLink.link}>
+            className='text-md sm:text-2xl text-black sm:px-4 hover:text-black hover:cursor-pointer'
+            
+            onClick={() => {
+              scroller.scrollTo(pageLink.link , {duration: 800,
+                delay: 0,
+                smooth: 'easeInOutQuart'})
+            }}>
             <span className='link link-underline link-underline-black'>
               {pageLink.name}
             </span>

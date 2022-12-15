@@ -14,7 +14,7 @@ const roundButtonList = [
   },
   {
     icon: <FontAwesomeIcon icon={faTwitter} color='#fff' />,
-    link: "www.facebook.com",
+    link: "https://twitter.com/dubWithYakxa",
   },
   {
     icon: <FontAwesomeIcon icon={faInstagram} color='#fff' />,

@@ -1,22 +1,23 @@
 import { slide as Menu } from "react-burger-menu";
 import "./css/hamburger.css";
+import {scroller} from "react-scroll";
 
 var PageLinksList = [
   {
     name: "Home",
-    link: "#about",
+    link: "about",
   },
   {
     name: "About Us",
-    link: "#about",
+    link: "about",
   },
   {
     name: "Team",
-    link: "#team",
+    link: "team",
   },
   {
     name: "Contact Us",
-    link: "#contact",
+    link: "contact",
   },
 ];
 
@@ -28,7 +29,11 @@ const Hamburger = (props) => {
         return (
           <a
             className='text-left font-normal text-1xl text-black pl-2 py-4 hover:text-black hover:cursor-pointer '
-            href={pageLink.link}>
+            onClick={() => {
+              scroller.scrollTo(pageLink.link , {duration: 800,
+                delay: 0,
+                smooth: 'easeInOutQuart'})
+            }}>
             <span className='link link-underline link-underline-black text-black'>
               {pageLink.name}
             </span>

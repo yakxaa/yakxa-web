@@ -1,6 +1,7 @@
 import Navbar from "./navbar";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
+import {scroller} from "react-scroll";
 
 const Landing = () => {
   return (
@@ -12,7 +13,10 @@ const Landing = () => {
         <button
           className='bg-black border-2 border-black text-white py-2 px-4 my-8 rounded-none hover:border-black hover:cursor-pointer hover:bg-white hover:text-black hover:scale-110 transition-all ease-linear duration-300 '
           onClick={() => {
-            window.location.replace("#demo");
+            // window.location.replace("#demo");
+            scroller.scrollTo("demo" , {duration: 800,
+              delay: 0,
+              smooth: 'easeInOutQuart'})
           }}>
           Get Demo
         </button>
