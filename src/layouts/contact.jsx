@@ -8,7 +8,7 @@ import { LazyLoadImage } from "react-lazy-load-image-component";
 import 'react-lazy-load-image-component/src/effects/blur.css';
 
 const email = "contact@yakxa.in";
-const mobile = "7828369492";
+const mobile = "+91 78283 69492";
 
 function InputField(props) {
   return (
@@ -133,12 +133,14 @@ const ContactForm = (props) => {
       if (
         responses[0].status === 201 &&
         (responses[1] ? responses[1].status === 201 : true)
-      )
-        toast("Submitted Successfully");
-      else toast("Error occured");
+      ) return;
+       // toast("Submitted Successfully");
+      // toast("Error occured");
+      throw "Error occured"
     } catch (error) {
       console.log(error);
-      toast("An error occured");
+      // toast("An error occured");
+      throw "Error occured"
     }
   };
 
@@ -151,7 +153,13 @@ const ContactForm = (props) => {
         validationSchema={contactUsSchema}
         onSubmit={async (values , {resetForm}) =>  {
           changeButtonDiabilityTo(true);
-          await submitForm(values);
+          await toast.promise(submitForm(values), {
+            pending: 'Hang tight! This will just take a moment.',
+            success: 'Yayy! We\'ll get in touch with you soon.',
+            error: 'Error occured! Please try again after some time.'
+          }).catch((value) => {
+            
+          })
           resetForm();
           console.log("yes")
           changeButtonDiabilityTo(false);
@@ -257,6 +265,7 @@ const ContactForm = (props) => {
 //copy to clipboard
 function copy(text) {
   navigator.clipboard.writeText(text);
+  toast("Copied to clipboard", {autoClose: 2000})
 }
 
 const bannerImg = "assets/contact-us.png";
@@ -288,8 +297,7 @@ function Contact(props) {
                 <address>
                   <a
                     id='yakxaMail'
-                    href={`mailto: ${email}`}
-                    className='text-white hover:text-pink-300'>
+                    className='text-white hover:text-pink-300 hover:cursor-pointer'>
                     <span onClick={() => copy(email)}>{email}</span>
                   </a>
                 </address>
