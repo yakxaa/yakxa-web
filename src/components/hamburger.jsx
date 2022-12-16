@@ -5,7 +5,7 @@ import {scroller} from "react-scroll";
 var PageLinksList = [
   {
     name: "Home",
-    link: "about",
+    link: "landing",
   },
   {
     name: "About Us",

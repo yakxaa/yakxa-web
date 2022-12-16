@@ -1,6 +1,6 @@
-const languages = ["Original" ,"Bangla" , "Gujrati" , "Hindi","Kannada" ,"Malayalam",  "Marathi" , "Punjabi","Tamil",   "French" , "German" ,"Italian" ,"Japenese","Russian" , "Spanish" ,   ];
+const languages = ["Original" ,"Bangla" , "Gujarati" , "Hindi","Kannada" ,"Malayalam",  "Marathi" , "Punjabi","Tamil",   "French" , "German" ,"Italian" ,"Japenese","Russian" , "Spanish" ,   ];
 const voice = [ "Male","Female",];
-const categories = ["Voice Over","Interview",  "Speech", "Animation"];
+const categories = ["Voice Over","Animation", "Interview",  "Speech", ];
 
 const links = {
 	"Voice Over" : {
@@ -12,13 +12,13 @@ const links = {
 			"Male": "https://www.youtube.com/embed/t50Vos47Bnw",
 			"Female" : "https://www.youtube.com/embed/6kfTyFfSULc"
 		},
-		"Gujrati" : {
+		"Gujarati" : {
 			"Male": "https://www.youtube.com/embed/yT3yd5X6rE4",
 			"Female" : "https://www.youtube.com/embed/RCJ-gYV9lNI"
 		},
 		"Hindi" : {
 			"Male": "https://www.youtube.com/embed/VVwthmzZqvw",
-			"Female" : "https://www.youtube.com/embed/DAOFpgocfrg"
+			"Female" : "https://www.youtube.com/embed/KtWfyjJk2HQ"
 		},
 		"Kannada" : {
 			"Male": "https://www.youtube.com/embed/eJeG6SshbJk",
@@ -42,7 +42,7 @@ const links = {
 		},
 		"French" : {
 			"Male": "https://www.youtube.com/embed/ptuF2sSY1YE",
-			"Female" : "https://www.youtube.com/embed/DAOFpgocfrg"
+			"Female" : "https://www.youtube.com/embed/39wGK-zaDlM"
 		},
 		"German" : {
 			"Male": "https://www.youtube.com/embed/qT_TIhugkm0",
@@ -61,7 +61,7 @@ const links = {
 		},
 		"Spanish" : {
 			"Male": "https://www.youtube.com/embed/Q0RVEYkwZTE",
-			"Female" : "https://www.youtube.com/embed/DAOFpgocfrg"
+			"Female" : "https://www.youtube.com/embed/G-14DKEVBq0"
 		},
 	},
 
@@ -72,7 +72,7 @@ const links = {
 		"Bangla" : {
 			"Male": "https://www.youtube.com/embed/eLeFUA6cmw4",
 		},
-		"Gujrati" : {
+		"Gujarati" : {
 			"Male": "https://www.youtube.com/embed/oRGJtHaCFIM",
 		},
 		"Hindi" : {

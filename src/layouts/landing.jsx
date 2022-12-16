@@ -5,7 +5,7 @@ import {scroller} from "react-scroll";
 
 const Landing = () => {
   return (
-    <div className='min-h-screen flex flex-col justify-between '>
+    <div className='min-h-screen flex flex-col justify-between ' id="landing">
       <Navbar />
       <div>
         <p className='md:mb-2 text-4xl font-semibold md:text-6xl'>Go Global</p>
